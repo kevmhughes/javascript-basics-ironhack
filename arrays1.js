@@ -34,3 +34,8 @@ for (let indice = 0; indice < movimientosBancarios.length; indice++) {
 }
 
 console.log(`Saldo total: ${saldoTotal}`);
+
+// Un array que contiene caraceristicas de la persona
+// Su nombre, color ojos, edad, aficiones, si le gusta la programación
+let caraceristicas = ["Esteban", "azules", 45, ["Hacer Freetours", "Pasear"], true];
+console.log(caraceristicas);
