@@ -52,6 +52,12 @@ console.log("Idioma teclado: ", idiomaTeclado);
 numeroNotificacionesPendientes = numeroNotificacionesPendientes + 1;
 numeroNotificacionesPendientes = numeroNotificacionesPendientes + 1;
 
+// otra forma 
+numeroNotificacionesPendientes++;
+
+// aumentar más de una notificación
+numeroNotificacionesPendientes += 5;
+
 console.log("Numero notficaciones pendientes: ", numeroNotificacionesPendientes);
 
 // ¿Cómo podemos saber el tipo de dato que almacena una variable?
