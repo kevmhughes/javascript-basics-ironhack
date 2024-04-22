@@ -47,3 +47,7 @@ console.log("Cosas que ha comido Eva: ", meriendaEva.length);
 // Merienda Balam
 let meriendaBalam = ["pasta", "zumo de naranja"];
 console.log("Cosas que ha comido Balam: ", meriendaBalam.length);
+
+// Los strings también se pueden recorrer igual que los arrays. Y también se puede acceder a sus posiciones. 
+// Esto pasa, porque tanto los arrays como los strings con un tipo de dato ITERABLE
+console.log("Eva"[0]);
