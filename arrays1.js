@@ -39,3 +39,11 @@ console.log(`Saldo total: ${saldoTotal}`);
 // Su nombre, color ojos, edad, aficiones, si le gusta la programación
 let caraceristicas = ["Esteban", "azules", 45, ["Hacer Freetours", "Pasear"], true];
 console.log(caraceristicas);
+
+// Los arrays pueden ser vaciós como la merienda de EVa
+let meriendaEva = [];
+console.log("Cosas que ha comido Eva: ", meriendaEva.length);
+
+// Merienda Balam
+let meriendaBalam = ["pasta", "zumo de naranja"];
+console.log("Cosas que ha comido Balam: ", meriendaBalam.length);
