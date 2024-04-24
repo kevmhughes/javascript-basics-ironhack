@@ -12,6 +12,8 @@
 // [] --> corchetes
 let movimientosBancarios = [650000, -20, 1500, -45, -30];
 
+
+
 // Operaciones típicas cuando tienes un array
 
 // Consultar el valor de la variable movimientosBancarios
