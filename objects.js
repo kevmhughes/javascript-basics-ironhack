@@ -59,3 +59,10 @@ let grosor = portatil.dimensiones.grosor;
 if (grosor <= 5) {
     console.log("El portatil no es muy grueso.")
 }
+
+// Acceder a la propiedad 'precio'. Si no existe (o te equivocas en el nombre), saldra como undefined
+
+console.log("Precio: ", portatil.precio);
+
+// Me equivoco al acceder al grosor del portatil
+//console.log(portatil.dimesiones.grosor);
