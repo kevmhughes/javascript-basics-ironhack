@@ -10,6 +10,10 @@
             color: green;
         }
 
+        .title {
+            background-color: yellow;
+        }
+
         table {
             width: 50%;
             border-collapse: collapse;
@@ -35,7 +39,7 @@
 </head>
 
 <body>
-    <h1 class="title">Precio de una Manzana</h1>
+    <h1 id="titulo" class="title">Precio de una Manzana</h1>
     <table>
         <tr>
             <th>Descripción</th>
@@ -51,6 +55,26 @@
         </tr>
         <tr>
             <td>Precio Final</td>
-            <td id="total">1.10</td>
+            <td id="total" style="color: #800060; font-weight: 700;">1.10</td>
         </tr>
     </table>
+    <script>
+        // Forma muy típica de obtener la información textual del nodo #titulo
+        let textoTitulo = document.querySelector('#titulo').textContent;
+        console.log("Titulo: ", textoTitulo);
+
+        // Recuperar la información textual del nodo #total
+        let textoTotal = document.querySelector('#total').textContent;
+        console.log("Total: ", textoTotal);
+
+        // Acceder a los estilos el línea del nodo #total
+
+        console.log("Estilos en línea del #total: ", document.querySelector('#total').style);
+
+        // Acceder a la valor de la propuedad color del estilo en línea de #total
+        console.log("Color estilo en línea del #total: ", document.querySelector('#total').style.color);
+
+    </script>
+</body>
+
+</html>
