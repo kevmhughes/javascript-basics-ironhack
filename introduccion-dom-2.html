@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Card</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f9;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .pokemon-card {
+            width: 250px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .pokemon-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .pokemon-name {
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .pokemon-type {
+            color: #666;
+            background-color: #E0E0E0;
+            margin: 0;
+            padding: 5px;
+        }
+
+        .pokemon-description {
+            color: #555;
+            font-size: 14px;
+            padding: 10px;
+            border-top: 1px solid #eee;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="pokemon-card">
+        <img src="https://via.placeholder.com/150" alt="" class="pokemon-image">
+        <h1 id="poke-name" class="pokemon-name">POKEMON NAME</h1>
+        <h2 class="pokemon-type">POKEMON TYPE</h2>
+        <p class="pokemon-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet eligendi eaque
+            ex sed aspernatur, sint atque quod ab dolor deserunt nisi ducimus, aliquam nobis accusantium veritatis autem
+            consectetur hic commodi.</p>
+    </div>
+    <script>
+        /** Imagina que estos datos vienen de alguna "base de datos". La idea principal es recoger estos datos, que van a ser diferentes en función del pokemon, y colocarlos en una plantilla HTML */
+
+        let pokemonData = {
+            name: 'Pikachu',
+            type: 'Electric',
+            description: 'Pikachu is a small, chubby, and incredibly cute mouse-like Pokémon',
+            imageURL: 'https://img.pokemondb.net/artwork/avif/pikachu.avif'
+        }
+
+
+        /** JavaScript nos permite tomar los datos de forma dinámica de una variable (que puede ser rellenada bien sea por una llamada a una API, o son datos que nos vienen generados des de una base de datos); y colocarlos en aquellas partes del DOM donde corresponda **/
+    </script>
+</body>
+
+</html>

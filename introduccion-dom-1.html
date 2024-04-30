@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precio de una Manzana</title>
+    <style>
+        h1 {
+            color: green;
+        }
+
+        table {
+            width: 50%;
+            border-collapse: collapse;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+
+        th,
+        td {
+            padding: 8px;
+            text-align: left;
+        }
+
+        img {
+            width: 50px;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="title">Precio de una Manzana</h1>
+    <table>
+        <tr>
+            <th>Descripción</th>
+            <th>Monto</th>
+        </tr>
+        <tr>
+            <td>Precio Base</td>
+            <td>$1.00</td>
+        </tr>
+        <tr>
+            <td>IVA (10%)</td>
+            <td>$0.10</td>
+        </tr>
+        <tr>
+            <td>Precio Final</td>
+            <td id="total">$1.10</td>
+        </tr>
+    </table>
