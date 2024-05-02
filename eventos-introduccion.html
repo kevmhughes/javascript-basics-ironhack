@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            border: 1px solid black;
+            background-color: beige;
+            width: 100px;
+            height: 100px;
+            margin-bottom: 1rem;
+            cursor: pointer;
+            user-select: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Eventos JavaScript - Intro </h1>
+    <h2>Una tienda y queremos ver cuales son los productos más clicados</h2>
+    <div onclick="montanaCrossClicada()">
+        <p>Bicicleta de Montaña CROSS</p>
+        <p>Clics: <span id="clics-cross"></span></p>
+    </div>
+    <div id="bici-barata">
+        <p>Bicicleta de Montaña Barata</p>
+        <p>Clics: <span id="clics-barata"></span></p>
+
+    </div>
+    <button id="reset">Limpiar contadores</button>
+    <button id="checkout">Ir al carrito</button>
+
+    <script>
+        let clicsCross = 0;
+        let clicsBarata = 0;
+
+        function montanaCrossClicada() {
+            console.log('Has pulsado la bicicleta Montaña CROSS'); clicsCross++;
+            console.log(clicsCross);
+            document.querySelector('#clics-cross').textContent = clicsCross;
+        }
+
+        function montanaBarataClicada() {
+            console.log('Has pulsado la bicicleta Montaña BARATA'); clicsBarata++;
+            console.log(clicsBarata);
+            document.querySelector('#clics-barata').textContent = clicsBarata;
+        }
+
+        const divBarata = document.querySelector('#bici-barata');
+        // Estamos asignando a la propiedad onclick del objeto divBarata la función montanaBarataClicada. 
+        divBarata.onclick = montanaBarataClicada;
+
+        const btnReset = document.querySelector('#reset');
+        btnReset.onclick = function () {
+            console.log("Ok, reseteamos las variables");
+            clicsBarata = 0;
+            clicsCross = 0;
+        }
+
+        // Otra manera que tenemos para asociar un evento a un objeto del DOM, es mediante el método addEventListener
+        const btnCheckout = document.querySelector('#checkout');
+        btnCheckout.addEventListener('click', () => {
+            console.log("Vamos al carrito!");
+        });
+
+    </script>
+</body>
+
+</html>
