@@ -25,3 +25,4 @@ console.log(eresMayorEdad(25));
 let edadRicardo = 25;
 let mensaje = "Es Ricardo mayor de edad? " + eresMayorEdad(edadRicardo);
 console.log(mensaje);
+

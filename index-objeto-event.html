@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            height: 200px;
+            width: 200px;
+            background-color: yellow;
+            border: 1px solid black;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>El Objeto Event</h1>
+    <div id="main" class="box">
+
+    </div>
+    <h2>Tienda</h2>
+    <section>
+        <ul id="alimentos">
+            <li id="leche">Leche</li>
+            <li id="patatas">Patatas</li>
+            <li id="brocoli">Brocoli</li>
+        </ul>
+    </section>
+    <script>
+        /* 1. Que es y como se puede explorar el objeto event */
+        let box = document.querySelector('#main');
+
+
+        /** Cuando JavaScript ejecuta la función, automáticamente te provee de un objeto como parámetro de la función. Este objeto, tu NO se lo tienes pasar de ninguna manera, lo hace JavaScript de forma automática. Lo que si necesitamos hacer, es poner un nombre al parámetro*/
+        function mostrarInfoEvento(event) {
+            console.log("Hola! Soy lo mismo que antes");
+            console.log(event);
+        }
+        box.addEventListener('click', mostrarInfoEvento);
+        /* 2. Propiedades interesantes del objeto event. Click y keyup */
+        /** Por ejemplo, queremos detectar que tecla ha pulsado el usuario para tomar decisiones (ejemplo palabradeldia, que rellenariamos la letra en la casilla que toque */
+        let body = document.querySelector('body');
+        body.addEventListener("keyup", function (event) {
+            console.log(event);
+
+        });
+
+        /* 3. La propiedad event.target ! */
+        /* 4. Propagación de eventos, y como podemos usarla en nuestro beneficio */
+
+        /**
+         * Queremos usar la misma función para manejar cualquier elemento clicado por el cliente
+         * 
+         */
+
+        function mostrarInfoConsola(event) {
+            console.log("Has añadido un alimento a la cesta");
+            console.log("Queremos añadir el alimento: ", event.target);
+            console.log("Acceder al textContent del elemeto clicado: ", event.target.textContent);
+            console.log("Acceder al id del elemeto clicado: ", event.target.id);
+
+            // Pintar de amarillo el fondo del elemento clicado
+             event.target.style.backgroundColor = "yellow";
+             
+
+        }
+
+        document.querySelector('#leche').onclick = mostrarInfoConsola;
+        document.querySelector('#patatas').onclick = mostrarInfoConsola;
+        document.querySelector('#brocoli').onclick = mostrarInfoConsola;
+
+
+
+    </script>
+</body>
+
+</html>
