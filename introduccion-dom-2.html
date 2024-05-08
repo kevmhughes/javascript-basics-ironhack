@@ -53,17 +53,58 @@
     </style>
 </head>
 
-<body>
+<body style="border: 5px solid black;">
     <div class="pokemon-card">
         <img src="https://via.placeholder.com/150" alt="" class="pokemon-image">
-        <h1 id="poke-name" class="pokemon-name">POKEMON NAME</h1>
+        <h1 id="poke-name" class="pokemon-name redondito">POKEMON NAME</h1>
         <h2 class="pokemon-type">POKEMON TYPE</h2>
         <p class="pokemon-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet eligendi eaque
-            ex sed aspernatur, sint atque quod ab dolor deserunt nisi ducimus, aliquam nobis accusantium veritatis autem
+            ex sed aspernatur, sint atque quod ab dolor deserunt nisi ducimus, aliquam nobis accusantium
+            veritatis autem
             consectetur hic commodi.</p>
     </div>
+    <div>
+        <label for="">Nuevo nombre</label>
+        <input id="change-name" placeholder="Cambia el nombre por...."></input>
+        <button> Cambiar nombre</button>
+    </div>
     <script src="script-intro-dom-2.js"></script>
+    <script>
+        // La propiedad style contiene los estilos en línea
 
+        const body = document.querySelector('body');
+        console.log("propiedad style del body", body.style);
+
+        // La propiedad classList contiene todas las clases CSS del atributo "class"
+        const h1 = document.querySelector('h1');
+        console.log("Classes CSS aplicadas al h1: ", h1.classList)
+        // quitar la clase CSS "pokemon-name"
+        h1.classList.remove('pokemon-name');
+
+        // La propiedad textContent contiene la información textual del nodo <p>Hola</p>
+        const pokeDescription = document.querySelector('.pokemon-description');
+        console.log("textContent del párrafo: ", pokeDescription.textContent);
+
+        // La propiedad innerHTML contiene "todos los hijos" de ese nodo en formato HTML!
+        console.log("textContent del párrafo: ", pokeDescription.innerHTML = "<strong style='color: red'>BLA BLA</strong>");
+
+        // La propiedad value es exclusiva de los controles de formulario y no tiene sentido en otros nodos
+        console.log("value del párrafo", pokeDescription.value);
+
+
+        document.querySelector('button').onclick = function (event) {
+
+            console.log("97: event.target hace referencia al botón", event.target);
+
+            // Propiedad value del <input>
+            console.log("Value del input: ", document.querySelector('#change-name').value);
+        }
+
+        // Detectar cuando cambia el valor del input y el campo pierde el foco
+        document.querySelector('input').onchange = function (event) {
+            console.log("Ha cambiado el valor del <input>: ", event.target.value);
+        }
+    </script>
 </body>
 
 </html>
