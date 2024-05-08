@@ -63,8 +63,8 @@
             console.log("Acceder al id del elemeto clicado: ", event.target.id);
 
             // Pintar de amarillo el fondo del elemento clicado
-             event.target.style.backgroundColor = "yellow";
-             
+            event.target.style.backgroundColor = "yellow";
+
 
         }
 
@@ -72,7 +72,18 @@
         document.querySelector('#patatas').onclick = mostrarInfoConsola;
         document.querySelector('#brocoli').onclick = mostrarInfoConsola;
 
+        // querySelectorAll
 
+        // El método document.querySelectorAll permite seleccionar un conjunto de nodos
+        const listItems = document.querySelectorAll('li');
+        console.log("Todos los li: ", listItems.length);
+
+        // Puedo iterar sobre estos nodos para: obtener información, actualizar estilos en línea, o añadir listeners
+        // el parámetro 'elem' es cada uno de los nodos de listItems
+        listItems.forEach(function (elem) {
+            console.log(elem.textContent);
+            elem.style.border = "2px solid green";
+        });
 
     </script>
 </body>
