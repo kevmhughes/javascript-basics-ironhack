@@ -92,9 +92,10 @@
         console.log("value del párrafo", pokeDescription.value);
 
 
-        document.querySelector('button').onclick = function (event) {
+        document.querySelector('button').onclick = function (ejemplo) {
 
             console.log("97: event.target hace referencia al botón", event.target);
+            console.log(event);
 
             // Propiedad value del <input>
             console.log("Value del input: ", document.querySelector('#change-name').value);
