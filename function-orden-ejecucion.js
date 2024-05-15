@@ -15,6 +15,7 @@ function muestraPorConsola_v2(mensaje) {
 
 muestraPorConsola("Lo que yo ponga aquí, es lo que se va a mostrar por consola!") // 3
 
+
 //Las funciones pueden tener más de un parámetro. Por ejemplo, la siguiente función "suma" tiene 2. Lo que hace es sumar el valor de dichos parámetros y los muestra por consola
 
 function suma(a, b) {
