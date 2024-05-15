@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Light Switching</title>
+    <style>
+        .canvas {
+            width: 600px;
+            height: 500px;
+            margin: 50px auto;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .bulb-off {
+            width: 265px;
+            height: 400px;
+            background: url('lightoff.png') no-repeat;
+            margin: auto;
+        }
+
+        .bulb-on {
+            width: 265px;
+            height: 400px;
+            background: url('lighton.png') no-repeat;
+            ;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="canvas">
+        <h1>Turn the light on and off </br>by clicking the bulb!</h1>
+        <h2 id="message">The Light is off</h2>
+        <div id="bulb" class="bulb-off"></div>
+        <button id="stop">STOP automatic switch</button>
+    </div>
+    <script>
+        // Buena suerte ! Espero que se te encianda la "bombilla"!
+
+        let isLightOn = false;
+
+        const bulb = document.querySelector('#bulb');
+
+        // Vamos a usar la función setInterval, para que cada 1000 milisegundos, intercambiar entre encendido y apagado
+
+        const interval = setInterval(switchLight, 100);
+
+        function switchLight() {
+            // 1. Averiguar que ha hecho el usuario (hacer doble click. Lo sabemos porque se está ejecutando esta función)
+
+            // 2. En función de las variables de estado, actualizar el DOM y las variables de estado
+
+            // 2.1 Si la bombilla está apagada, hay que encendarla. Esto significa: quitar la clase bulb-off de la bombilla y añadir la clase bulb-on. Y actualizar la variable de estado isLightOn = true
+            if (!isLightOn) {
+                bulb.classList.remove('bulb-off');
+                bulb.classList.add('bulb-on');
+                isLightOn = true;
+            }
+
+            // 2.2 Si la bombilla está encendida, hay que apagarla. Esto significa: añadir la clase bulb-off y quitar la clase bulb-on. Actualizar la variable de estadi isLightOn = false
+            else {
+                bulb.classList.remove('bulb-on');
+                bulb.classList.add('bulb-off');
+                isLightOn = false;
+            }
+
+            // Actualizar el mensaje en función de la variable de estado 
+            if (isLightOn) {
+                document.querySelector('#message').textContent = "The Light is on";
+            } else {
+                document.querySelector('#message').textContent = "The Light is off";
+            }
+        }
+
+        bulb.ondblclick = switchLight;
+
+        document.querySelector('#stop').addEventListener('click', function () {
+            // la función clearInterval para el temporizador
+            clearInterval(interval);
+        });
+
+
+
+    </script>
+</body>
+
+</html>
