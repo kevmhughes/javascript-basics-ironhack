@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Ejemplo de POST</h1>
+    <script>
+        async function postUser() {
+            // el dato que queremos enviar a la API
+            let user = {
+                nombre: 'Catalina',
+                apellido: 'Flores'
+            };
+
+
+            // Usamos el método fetch, pero en esta ocasión, lo configuramos para realizar un POST (enviar datos), y además, le configuramos que el tipo de contenido que vamos a enviar es un JSON y que acepte codificación utf-8 (para poder enviar carácteres con accentos, la ñ, etc.)
+            let response = await fetch('https://pimec2023.free.beeceptor.com', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json;charset=utf-8'
+                },
+                body: JSON.stringify(user) // información que te envio en foramto JSON. A este concepto también se le llama payload
+            });
+
+            // Vamos a comprobar la respuesta del servidor a ver como ha ido el envío de datos
+            // Es RARO que el formato de la respuesta de la API sea un texto plano. Típicamente, suelen enviar un JSON, entonces , tenemos que poner response.json()
+            let result = await response.text();
+            console.log(result);
+        }
+        postUser();
+    </script>
+</body>
+
+</html>
