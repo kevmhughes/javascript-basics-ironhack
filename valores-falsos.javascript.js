@@ -1,4 +1,4 @@
-let nombre = ""; // el string vacio se evalua como false
+let nombre = "Ricardo"; // el string vacio se evalua como false
 // https://developer.mozilla.org/en-US/docs/Glossary/Falsy
 
 if (nombre) {

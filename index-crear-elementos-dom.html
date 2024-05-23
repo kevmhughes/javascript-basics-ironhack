@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="
+https://cdn.jsdelivr.net/npm/@picocss/pico@2.0.6/css/pico.min.css
+" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Gym Bro App</h1>
+    <main class="container">
+        <label for="weight">Weight</label>
+        <input type="number" name="weight" id="weight" min="1" max="150" required>
+
+        <label for="repetitions">Repetitions</label>
+        <input type="number" name="repetitions" id="repetitions" min="1" max="100" required>
+
+        <button id="save">Save</button>
+
+        <section id="tracking" style="border:black 1px solid; margin-top: 1rem;">
+
+        </section>
+
+    </main>
+    <script>
+        const button = document.querySelector('#save');
+
+        button.addEventListener('click', function () {
+            const weight = document.querySelector('#weight').value;
+            console.log("🚀 ~ file: index-crear-elementos-dom.html:34 ~ weight:", weight)
+            const repetitions = document.querySelector('#repetitions').value;
+            console.log("🚀 ~ file: index-crear-elementos-dom.html:36 ~ repetitions:", repetitions);
+
+            // Tenemos que crear un elemento nuevo, añadir la información sobre las repeticiones y el peso, y luego añadirlo con hijo de section
+            const newTrack = document.createElement('article');
+            newTrack.innerHTML = `<strong>${weight}</strong> Kgs -- <strong>${repetitions}</strong> reps`;
+
+            // añadimos este nodo que acabmos crear como hijo del section
+            document.querySelector('#tracking').appendChild(newTrack);
+
+        });
+
+    </script>
+</body>
+
+</html>
