@@ -37,7 +37,7 @@ https://cdn.jsdelivr.net/npm/@picocss/pico@2.0.6/css/pico.min.css
 
             // Tenemos que crear un elemento nuevo, añadir la información sobre las repeticiones y el peso, y luego añadirlo con hijo de section
             const newTrack = document.createElement('article');
-            newTrack.innerHTML = `<strong>${weight}</strong> Kgs -- <strong>${repetitions}</strong> reps`;
+            newTrack.innerHTML = `<h3>New Track</h3><strong>${weight}</strong> Kgs -- <strong>${repetitions}</strong> reps`;
 
             // añadimos este nodo que acabmos crear como hijo del section
             document.querySelector('#tracking').appendChild(newTrack);
