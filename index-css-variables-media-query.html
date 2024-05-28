@@ -74,6 +74,20 @@
             color: azure;
             border: 0;
         }
+
+        /** Dentro de los parentesis le ponemos una condición. En este caso: cuando el viewport, llegue como mínimo a 600px, aplica las siguientes reglas CSS*/
+        @media (min-width: 600px) {
+            button {
+                background-color: orange;
+            }
+        }
+        
+        /** no mejor ejemplo, pero asi quitariamos la propiedad wrap*/
+        @media (min-width: 1200px) {
+            div {
+                flex-wrap: nowrap;
+            }
+        }
     </style>
 </head>
 
