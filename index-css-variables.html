@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --primary: #456128;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        div {
+
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        section {
+            border: 1px solid darkgray;
+            flex: 1 0 auto;
+        }
+
+        section:hover {
+            box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2)
+        }
+
+        .plan_pro:hover {
+            box-shadow: 0 8px 12px 0 rgb(104, 104, 171, 0.8);
+        }
+
+        h1 {
+            text-align: center;
+            background-color: black;
+            color: azure;
+            font-size: 1.3rem;
+            font-weight: 300;
+            margin: 0;
+            padding: 1rem;
+        }
+
+        .plan_pro h1 {
+            background-color: var(--primary);
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            text-align: center;
+        }
+
+        ul li:nth-child(1),
+        ul li:nth-child(6) {
+            background-color: gainsboro;
+        }
+
+
+        li {
+            padding: 1rem 5rem;
+            font-size: 1rem;
+            border: 1px solid gainsboro;
+            marker: none;
+        }
+
+        button {
+            padding: .5rem 1rem;
+            background-color: var(--primary);
+            color: azure;
+            border: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="plan">
+        <section class="plan_basico">
+            <h1>Básico</h1>
+            <ul>
+                <li>$ 9.99 / año</li>
+                <li>10GB de Almacenamiento</li>
+                <li>10 Correos Electrónicos</li>
+                <li>10 Dominios</li>
+                <li>1GB de Ancho de Banda</li>
+                <li><button>Registrarse</button></li>
+            </ul>
+        </section>
+
+        <section class="plan_pro">
+            <h1>Pro</h1>
+            <ul>
+                <li>$ 24.99 / año</li>
+                <li>25GB de Almacenamiento</li>
+                <li>25 Correos Electrónicos</li>
+                <li>25 Dominios</li>
+                <li>2GB de Ancho de Banda</li>
+                <li><button>Registrarse</button></li>
+            </ul>
+        </section>
+
+        <section class="ullan_premium">
+            <h1>Premium</h1>
+            <ul>
+                <li>$ 49.99 / año</li>
+                <li>50GB de Almacenamiento</li>
+                <li>50 Correos Electrónicos</li>
+                <li>50 Dominios</li>
+                <li>5GB de Ancho de Banda</li>
+                <li><button>Registrarse</button></li>
+            </ul>
+        </section>
+    </div>
+</body>
+
+</html>
