@@ -3,11 +3,18 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
         :root {
             --primary: #456128;
+        }
+
+        html {
+            /** Usamos el tamaó del viewport para establecer el tamaño de letra, en este caso, un 2% del tamaó del viewport */
+
+            /** mínimo, 1 rem, máxmo 1.5rem, y entre medio, un 2% del viewport*/
+            font-size: clamp(1rem, 0.75rem + 1.5vw, 32px);
         }
 
         * {
