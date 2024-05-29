@@ -21,10 +21,12 @@
             box-sizing: border-box;
         }
 
+
         div.plan {
             display: flex;
             gap: 1rem;
-            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
         }
 
         div {
@@ -101,6 +103,13 @@
         @media (min-width: 600px) {
             button {
                 background-color: orange;
+            }
+        }
+
+        @media (min-width: 992px) {
+            div.plan {
+                flex-direction: row;
+
             }
         }
     </style>
