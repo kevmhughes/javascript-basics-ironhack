@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ironframework.css">
+    <link rel="stylesheet" href="styles-formulario.css">
+
+</head>
+
+<body>
+    <div class="centrar-bloque">
+        <form action="action_page.php">
+
+            <div style="display: flex; flex-direction: column;  width: 500px;">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                <label for="country">Country</label>
+                <select id="country" name="country">
+                    <option value="australia">Australia</option>
+                    <option value="canada">Canada</option>
+                    <option value="usa">USA</option>
+                </select>
+                <label for="subject">Subject</label>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+            </div>
+
+            <button class="btn-ok">Enviar Datos</button>
+
+        </form>
+    </div>
+
+</body>
+
+</html>

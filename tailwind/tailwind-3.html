@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <main>
+        <h1>Alert Messages</h1>
+        <p>Click on the "x" symbol to close the alert message.</p>
+        <div class="bg-red-600 text-white p-4 text-xl flex justify-between max-w-screen-sm">
+            <div><strong>Danger!</strong> Indicates a dangerous or potentially negative action.</div>
+            <span onclick="this.parentElement.style.display='none';">&times;</span>
+        </div>
+    </main>
+</body>
+
+</html>
