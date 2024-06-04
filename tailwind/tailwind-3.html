@@ -8,10 +8,10 @@
 </head>
 
 <body>
-    <main>
-        <h1>Alert Messages</h1>
-        <p>Click on the "x" symbol to close the alert message.</p>
-        <div class="bg-red-600 text-white p-4 text-xl flex justify-between max-w-screen-sm">
+    <main class="space-y-2 container mx-auto">
+        <h1 class="text-2xl">Alert Messages</h1>
+        <p class="text-xl">Click on the "x" symbol to close the alert message.</p>
+        <div class="bg-red-600 text-white p-4 flex justify-between sm:text-2xl">
             <div><strong>Danger!</strong> Indicates a dangerous or potentially negative action.</div>
             <span onclick="this.parentElement.style.display='none';">&times;</span>
         </div>
